@@ -1,0 +1,30 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://soap.api/xsd"
+           targetNamespace="http://soap.api/xsd" elementFormDefault="qualified">
+
+    <xs:element name="getPersonRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="eMail" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getPersonResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="person" type="tns:person"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="person">
+        <xs:sequence>
+            <xs:element name="eMail" type="xs:string"/>
+            <xs:element name="FirstName" type="xs:string"/>
+            <xs:element name="LastName" type="xs:string"/>
+            <xs:element name="RegNum" type="xs:int"/>
+            <xs:element name="LicenseNum" type="xs:string"/>
+            <xs:element name="Date" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
